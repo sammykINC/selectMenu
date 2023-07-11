@@ -1,0 +1,110 @@
+:root {
+  --pastelBlue: #88a2d3;
+  --pastelPurple: #be93f7;
+  --light: #fff;
+  --dark: #000;
+  --dark-bg_one: rgba(0, 0, 0, 0.2);
+  --dark-bg_two: rgba(0, 0, 0, 0.15);
+  --dark-bg_three: rgba(0, 0, 0, 0.25);
+  --light-bg_one: rgba(255, 255, 255, 0.35);
+  --light-bg_oneHalf: rgba(255, 255, 255, 0.2);
+  --light-bg_two: rgba(255, 255, 255, 0.45);
+  --light-bg_twoHalf: rgba(255, 255, 255, 0.4);
+  --light-bg_three: rgba(255, 255, 255, 0.55);
+  --bg_body: linear-gradient(135deg, var(--pastelBlue), var(--pastelPurple));
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  width: auto;
+  background-image: var(--bg_body);
+  user-select: none;
+}
+
+.selector {
+  width: 300px;
+  height: fit-content;
+  padding: 20px;
+  cursor: pointer;
+  color: var(--dark);
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.selectField {
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  background-color: var(--light-bg_one);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selectField:hover {
+  background-color: var(--light-bg_two);
+  transition: background-color 0.1s;
+}
+.selectField:active {
+  background-color: var(--light-bg_three);
+  transition: background-color 0.1s;
+}
+
+.arrowIcon {
+  width: 12px;
+  transition: transform 0.2s;
+}
+
+.smList {
+  width: 100%;
+  background-color: var(--light-bg_one);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.smList img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.listOption {
+  padding: 10px;
+  list-style: none;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.listOption:hover {
+  background-color: var(--light-bg_oneHalf);
+  transition: background-color 0.15s;
+}
+
+.listOption:active {
+  background-color: var(--light-bg_twoHalf);
+  transition: background-color 0.15s;
+}
+
+.hideList {
+  display: none;
+}
+
+.arrowRotation {
+  transform: rotate(180deg);
+}
+
+@keyframes dropAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-60px);
+  } to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
